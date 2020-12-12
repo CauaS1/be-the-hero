@@ -1,0 +1,22 @@
+<%- include("./partials/header.ejs") %>
+  <link rel="stylesheet" href="/styles/index.css">
+
+  <body>
+    <div class="main-content">
+      <img src="/img/logo.svg" alt="svg" class="logo">
+
+      <h2>Login</h2>
+      <form>
+        <input type="text" placeholder="Your ONG name" required>
+        <input type="text" placeholder="Password">
+        <button type="submit">Enter</button>
+      </form>
+
+      <a href="/register">
+        <img src="/img/back.svg" alt="">
+        I don't have an account
+      </a>
+    </div>
+  </body>
+
+  <%- include("./partials/footer.ejs") %>

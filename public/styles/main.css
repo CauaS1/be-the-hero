@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-redhero: #E02041;
+  --color-mainTitles: #13131A;
+  --color-secondaryTitles: #41414D;
+  --color-texts: #737380;
+  --color-secondaryTexts:#A8A8B3;
+  --color-background: #F0F0F5;
+
+  font-size: 62.5%;
+}
