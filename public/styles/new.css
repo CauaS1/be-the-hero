@@ -1,0 +1,94 @@
+.main {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 0 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.main img {
+  width: 20rem;
+  margin: 5rem 0;
+}
+
+.main h1 {
+  font-family: Rubik, sans-serif;
+  font-size: 2.7rem;
+  color: var(--color-mainTitles);
+  margin-bottom: 1rem;
+}
+
+.main p {
+  font-family: Rubik, sans-serif;
+  font-size: 1.5rem;
+  color: var(--color-texts);
+}
+
+.main form {
+  width: 100%;
+  margin-top: 2rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.main form input, .main form textarea {
+  width: 100%;
+  height: 4rem;
+  padding-left: 1rem;
+  margin-bottom: .5rem;
+  border-radius: .4rem;
+  border: 1px solid #ccc;
+  outline: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+.main form textarea {
+  max-width: 100%;
+  min-width: 100%;
+
+  max-height: 25rem;
+  min-height: 13rem;
+  
+  padding: 1rem 1rem;
+}
+
+.main form button {
+  width: 90%;
+  height: 4rem;
+  border: none;
+  outline: none;
+  border-radius: .4rem;
+  background-color: var(--color-redhero);
+  color: #fff;
+  cursor: pointer;
+}
+
+/*<a>*/
+.main a {
+  font-family: Rubik, sans-serif;
+  font-size: 1.6rem;
+  color: var(--color-secondaryTitles);
+  text-decoration: none;
+  margin-top: 2rem;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main a img {
+  width: 1.5rem;
+  margin-right: 1rem;
+}
+
+/*Hovers*/
+.main a:hover, button:hover {
+  transition: .3s;
+  opacity: .85;
+}

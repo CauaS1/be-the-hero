@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Account = require("./Account");
 const bcripty = require("bcryptjs");
+const crypto = require("crypto");
 
 router.get("/register", (req, res) => {
   res.render("register");
@@ -14,10 +15,12 @@ router.post("/create", (req, res) => {
       var salt = bcripty.genSaltSync(10);
       var hash = bcripty.hashSync(password, salt);
 
+      // var id = crypto.randomBytes(3).toString('hex');
+
       Account.create({
         name, email, password: hash, whatsapp, city
-      }).then(aa => {
-        res.json({ aa });
+      }).then(() => {
+        res.redirect("/");
       })
     } else {
       res.redirect("/register");
@@ -27,6 +30,8 @@ router.post("/create", (req, res) => {
     console.log(err);
   })
 });
+
+
 
 module.exports = router;
 

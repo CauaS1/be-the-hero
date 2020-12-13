@@ -1,0 +1,27 @@
+body {
+  background-color: var(--color-background);
+}
+
+header {
+  width: 100vw;
+  height: 6rem;
+  padding: 0 2rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img {
+  width: 10rem;
+}
+
+header p {
+  font-size: 1.7rem;
+  font-family: Rubik, sans-serif;
+}
+
+header p span {
+  font-weight: bold;
+}

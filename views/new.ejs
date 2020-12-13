@@ -1,0 +1,25 @@
+<%- include("./partials/header.ejs") %>
+  <link rel="stylesheet" href="/styles/new.css">
+
+  <body>
+    <div class="main">
+      <img src="/img/logo.svg" alt="Logo">
+
+      <h1>Register a new case</h1>
+      <p>Describe your case in details to find a hero to resolve this.
+      </p>
+
+      <form action="">
+        <input type="text" placeholder="Title of the case" required>
+        <textarea name="" placeholder="Description" required></textarea>
+        <input type="text" placeholder="Price in dollar" required>
+      </form>
+
+      <a href="/cases">
+        <img src="/img/back.svg" alt="">
+        Back to home
+      </a>
+    </div>
+  </body>
+
+  <%- include("./partials/footer.ejs") %>

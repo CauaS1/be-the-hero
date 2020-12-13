@@ -7,6 +7,9 @@ const connection = require("./database/db");
 const Account = require("./models/Account/Account");
 const accountController = require("./models/Account/AccountController");
 
+const Case = require("./models/Cases/Case");
+const caseController = require("./models/Cases/CaseController");
+
 //View Engine
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -26,6 +29,7 @@ connection
   })
 
 app.use("/", accountController);  
+app.use("/", caseController);
 
 app.get("/", (req, res) => {
   res.render("index");
