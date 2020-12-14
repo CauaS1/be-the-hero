@@ -10,7 +10,7 @@ const Case = connection.define("cases", {
     type: Sequelize.TEXT,
     allowNull: false
   },
-  value: {
+  price: {
     type: Sequelize.FLOAT
   }
 });

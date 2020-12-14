@@ -1,40 +1,55 @@
 <%- include("./partials/header.ejs") %>
   <link rel="stylesheet" href="/styles/cases.css">
+
   <body>
     <div class="main">
       <%- include("./partials/navbar.ejs") %>
 
-      <div class="content">
-        <h1>Welcome!</h1>
-        <p>Choose one of the cases below <br>
-          and save the day.
-        </p>
+        <div class="content">
+          <h1>Welcome!</h1>
+          <p>Choose one of the cases below <br>
+            and save the day.
+          </p>
 
-        <div class="cases-list">
-          <div class="case">
-            <main>
-              <div>
-                <h4>CASE:</h4>
-                <p>Medicine for a dog</p>
+
+          <div class="cases-list">
+            <% info.rows.forEach(infos=> { %>
+              <!--WHENE YOU USE "FindAndCOuntAll" YOU NEED TO USE THE "rows" -->
+              <div class="case">
+                <main>
+                  <div>
+                    <h4>CASE:</h4>
+                    <p>
+                      <%= infos.title %>
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4>ONG:</h4>
+                    <p>APAD</p>
+                  </div>
+
+                  <div>
+                    <h4>VALUE:</h4>
+                    <p>
+                      <%= infos.price %>$ Dollars
+                    </p>
+                  </div>
+
+                </main>
+                <div class="footer">
+                  <a href="">See more details</a>
+
+                  <form action="/delete" method="POST">
+                    <button type="submit">
+                      <img src="/img/trash.svg" alt="Trash">
+                    </button>
+                  </form>
+                </div>
               </div>
-
-              <div>
-                <h4>ONG:</h4>
-                <p>APAD</p>
-              </div>
-
-              <div>
-                <h4>VALUE:</h4>
-                <p>150$ dollars</p>
-              </div>
-
-            </main>
-            <div class="footer">
-              <a href="">See more details</a>
-            </div>
+              <% }) %>
           </div>
         </div>
-      </div>
 
     </div>
 

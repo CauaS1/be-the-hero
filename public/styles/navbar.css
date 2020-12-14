@@ -17,11 +17,20 @@ header img {
   width: 10rem;
 }
 
-header p {
+header p, header a {
   font-size: 1.7rem;
   font-family: Rubik, sans-serif;
+  text-decoration: none;
+  color: var(--color-mainTitles);
+
+  transition: .3s;
 }
 
 header p span {
   font-weight: bold;
 }
+
+header a:hover {
+  color: var(--color-redhero);
+}
+

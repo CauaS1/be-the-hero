@@ -1,11 +1,18 @@
 <%- include("./header.ejs") %>
-<link rel="stylesheet" href="/styles/navbar.css">
-<body>
-  <header>
-  <img src="/img/logo.svg" alt="Logo">
-    <p>Total of
-      <span>15 cases</span>
-    </p>
-  </header>  
-</body>
-<%- include("./footer.ejs") %>
+  <link rel="stylesheet" href="/styles/navbar.css">
+
+  <body>
+    <header>
+      <img src="/img/logo.svg" alt="Logo">
+      <% if(!details || details == undefined) {%>
+        <p>Total of
+          <span>
+            <%= info.count %> cases
+          </span>
+        </p>
+        <% } else { %>
+          <a href="/cases">Back to cases</a>
+        <% } %>  
+    </header>
+  </body>
+  <%- include("./footer.ejs") %>
