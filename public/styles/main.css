@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: ;
+}
+
+body {
+  background-color: var(--color-background);
+}
+
 :root {
   --color-redhero: #E02041;
   --color-mainTitles: #13131A;

@@ -9,6 +9,7 @@
   justify-content: flex-start;
 }
 
+
 .content h1 {
   font-size: 3rem;
   font-family: Rubik, sans-serif;
@@ -41,8 +42,6 @@
   padding: 1.5rem;
 }
 
-
-
 .case h4, .case p, .case a{
   font-family: Rubik, sans-serif;
   color: var(--color-secondaryTitles);
@@ -50,6 +49,7 @@
 }
 
 .case p {
+  width: 90%;
   color: var(--color-texts);
   margin-top: .5rem;
 }

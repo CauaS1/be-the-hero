@@ -38,9 +38,10 @@
 
                 </main>
                 <div class="footer">
-                  <a href="">See more details</a>
+                  <a href="/cases/details/<%= infos.id %>">See more details</a>
 
                   <form action="/delete" method="POST">
+                    <input type="hidden" name="id" value="<%= infos.id %>">
                     <button type="submit">
                       <img src="/img/trash.svg" alt="Trash">
                     </button>

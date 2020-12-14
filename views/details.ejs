@@ -6,14 +6,13 @@
       <%- include("./partials/navbar.ejs") %>
 
         <div class="cases-list">
-          <% info.rows.forEach(infos=> { %>
             <!--WHENE YOU USE "FindAndCOuntAll" YOU NEED TO USE THE "rows" -->
             <div class="case details">
               <main>
                 <div>
                   <h4>CASE:</h4>
                   <p>
-                    <%= infos.title %>
+                    <%= info.title %>
                   </p>
                 </div>
 
@@ -25,14 +24,14 @@
                 <div>
                   <h4>DESCRIPTION:</h4>
                   <p>
-                    <%= infos.description %>
+                    <%= info.description %>
                   </p>
                 </div>
 
                 <div>
                   <h4>VALUE:</h4>
                   <p>
-                    <%= infos.price %>$ Dollars
+                    <%= info.price %>$ Dollars
                   </p>
                 </div>
               </main>
@@ -49,7 +48,6 @@
                 </div>
               </div>
             </div>
-            <% }) %>
         </div>
     </div>
   </body>

@@ -26,12 +26,29 @@ router.post("/new", (req, res) => {
 });
 
 router.get("/cases/details/:id", (req, res) => {
-  Case.findAndCountAll({
-    offset: 0, //is going return from zero
-    limit: 1,
+  const { id } = req.params;
+  Case.findOne({
+    where: { id: id }
   }).then(info => {
     res.render("details", { info, details: true });
   })
 });
+
+router.post("/delete", (req, res) => {
+  const { id } = req.body;
+  if(id != undefined) {
+    if(!isNaN(id)) {
+      Case.destroy({
+        where: {id: id}
+      }).then(() => {
+        res.redirect("/cases");
+      });
+    } else {
+      res.redirect("/cases");
+    }
+  } else {
+    res.redirect("/cases");
+  }
+})
 
 module.exports = router;
