@@ -1,20 +1,24 @@
 <%- include("./header.ejs") %>
+  <link rel="stylesheet" href="/styles/main.css">
   <link rel="stylesheet" href="/styles/navbar.css">
 
   <body>
     <header>
-      <a href="/cases">
-        <img src="/img/logo.svg" alt="Logo">
-      </a>
-      <% if(!details || details == undefined) {%>
-        <p>Total of
-          <span>
-            <%= info.count %> cases
-          </span>
-        </p>
-        <% } else { %>
-          <a href="/cases">Back to cases</a>
-        <% } %>  
+      <div class="nav">
+        <a href="/cases">
+          <img src="/img/logo.svg" alt="Logo">
+        </a>
+        <% if(!details || details==undefined) {%>
+          <p>Total of
+            <span>
+              <%= info.count %> cases
+            </span>
+          </p>
+          <% } else { %>
+            <a href="/cases">Back to cases</a>
+            <% } %>
+      </div>
+
     </header>
   </body>
   <%- include("./footer.ejs") %>

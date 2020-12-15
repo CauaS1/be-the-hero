@@ -29,10 +29,11 @@
                     <p>APAD</p>
                   </div>
 
+
                   <div>
                     <h4>VALUE:</h4>
                     <p>
-                      <%= infos.price %>$ Dollars
+                      <%= infos.price.toFixed(2) %>$ Dollars
                     </p>
                   </div>
 
@@ -51,6 +52,14 @@
               <% }) %>
           </div>
         </div>
+
+        <script>
+          var moneyFormater = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })
+          info.rows.forEach(infos => {
+            var aa = formater.format(infos);
+          })
+          console.log(aa)
+        </script>
 
     </div>
 

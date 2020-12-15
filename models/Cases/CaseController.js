@@ -1,12 +1,12 @@
 const express = require("express");
 const router = express.Router();
 const Case = require("./Case");
+const Account = require("../Account/Account");
 
 router.get("/cases", (req, res) => {
   Case.findAndCountAll({
     offset: 0, //is going return from zero
     limit: 99,
-
   }).then(info => {
     res.render("cases", { info, details: false });
   })
@@ -36,10 +36,10 @@ router.get("/cases/details/:id", (req, res) => {
 
 router.post("/delete", (req, res) => {
   const { id } = req.body;
-  if(id != undefined) {
-    if(!isNaN(id)) {
+  if (id != undefined) {
+    if (!isNaN(id)) {
       Case.destroy({
-        where: {id: id}
+        where: { id: id }
       }).then(() => {
         res.redirect("/cases");
       });

@@ -1,5 +1,6 @@
 const Sequelize = require("sequelize");
 const connection = require("../../database/db");
+const Case = require("../Cases/Case");
 
 const Account = connection.define('accounts', {
   name: {
@@ -24,6 +25,11 @@ const Account = connection.define('accounts', {
   }
 });
 
+// Account.hasMany(Case);
+// Case.belongsTo(Account);
+
 Account.sync({ force: false })
+
+
 
 module.exports = Account;

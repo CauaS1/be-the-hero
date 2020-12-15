@@ -1,14 +1,17 @@
-body {
-  background-color: var(--color-background);
-}
-
 header {
   width: 100vw;
-  height: 6rem;
-  padding: 0 2rem;
+  height: 7rem;
 
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+header .nav {
+  width: 90%;
+  height: 100%;
+
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }

@@ -1,53 +1,50 @@
 <%- include("./partials/header.ejs") %>
-  <link rel="stylesheet" href="/styles/cases.css">
+  <link rel="stylesheet" href="/styles/details.css">
 
   <body>
     <div class="main">
       <%- include("./partials/navbar.ejs") %>
 
-        <div class="cases-list">
-            <!--WHENE YOU USE "FindAndCOuntAll" YOU NEED TO USE THE "rows" -->
-            <div class="case details">
-              <main>
-                <div>
-                  <h4>CASE:</h4>
-                  <p>
-                    <%= info.title %>
-                  </p>
-                </div>
-
-                <div>
-                  <h4>ONG:</h4>
-                  <p>APAD</p>
-                </div>
-
-                <div>
-                  <h4>DESCRIPTION:</h4>
-                  <p>
-                    <%= info.description %>
-                  </p>
-                </div>
-
-                <div>
-                  <h4>VALUE:</h4>
-                  <p>
-                    <%= info.price %>$ Dollars
-                  </p>
-                </div>
-              </main>
-              <div class="footer">
-                <div class="text">
-                  <h2>Save the day <br>
-                    Be the hero from this case</h2>
-                  <p>Enter in contact:</p>
-                </div>
-
-                <div class="buttons">
-                  <a href="#">Whatsapp</a>
-                  <a href="#">Email</a>
-                </div>
-              </div>
+        <div class="details">
+          <main>
+            <div>
+              <h4>CASE:</h4>
+              <p>
+                <%= info.title %>
+              </p>
             </div>
+
+            <div>
+              <h4>ONG:</h4>
+              <p>APAD</p>
+            </div>
+
+            <div>
+              <h4>DESCRIPTION:</h4>
+              <p>
+                <%= info.description %>
+              </p>
+            </div>
+
+            <div>
+              <h4>VALUE:</h4>
+              <p>
+                <%= info.price %>$ Dollars
+              </p>
+            </div>
+          </main>
+          <div class="footer">
+            <div class="text">
+              <h2>Save the day <br>
+                Be the hero from this case</h2>
+              <p>Enter in contact:</p>
+            </div>
+
+            <div class="buttons">
+              <a href="#">Whatsapp</a>
+              <a href="#">Email</a>
+            </div>
+          </div>
         </div>
     </div>
   </body>
