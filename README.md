@@ -1,7 +1,8 @@
-# Be The Hero
 <p align="center" >
   <img src="https://github.com/CauaS1/be-the-hero/blob/master/public/img/people.svg" width="150px" />
 </p>
+
+<hr>
 
 It's a project that I recreated from an old event.
 
