@@ -2,17 +2,19 @@ const express = require("express");
 const router = express.Router();
 const Case = require("./Case");
 const Account = require("../Account/Account");
+const Authenticator = require("../../middlewares/authenticatePermission");
 
-router.get("/cases", (req, res) => {
+
+router.get("/cases", Authenticator, (req, res) => {
   Case.findAndCountAll({
     offset: 0, //is going return from zero
     limit: 99,
   }).then(info => {
-    res.render("cases", { info, details: false });
+    res.render("cases", { info, sessionName: req.session.account , details: false });
   })
 });
 
-router.get("/newcase", (req, res) => {
+router.get("/newcase", Authenticator,(req, res) => {
   res.render("new");
 })
 
@@ -25,7 +27,7 @@ router.post("/new", (req, res) => {
   })
 });
 
-router.get("/cases/details/:id", (req, res) => {
+router.get("/cases/details/:id", Authenticator ,(req, res) => {
   const { id } = req.params;
   Case.findOne({
     where: { id: id }
