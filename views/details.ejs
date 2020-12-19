@@ -41,14 +41,11 @@
             </div>
 
             <div class="buttons">
-              <a href="#" class="whatsapp">Whatsapp</a>
-              <a href="#" class="email">Email</a>
+              <p class="whatsapp">Whatsapp: <span> <%= infoAccount.whatsapp %> </span> </p>
+              <p class="email">Email: <span><%= infoAccount.email %> </span> </p>
             </div>
           </div>
         </div>
     </div>
   </body>
-
-  <script src="/scripts/alertContact.js"></script>
-
-  <%- include("./partials/footer.ejs") %>
+<%- include("./partials/footer.ejs") %>

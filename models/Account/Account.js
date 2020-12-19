@@ -28,8 +28,6 @@ const Account = connection.define('accounts', {
 // Account.hasMany(Case);
 // Case.belongsTo(Account);
 
-Account.sync({ force: false })
-
-
+// Account.sync({ force: false })
 
 module.exports = Account;

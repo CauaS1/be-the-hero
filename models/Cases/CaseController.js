@@ -4,7 +4,6 @@ const Case = require("./Case");
 const Account = require("../Account/Account");
 const Authenticator = require("../../middlewares/authenticatePermission");
 
-
 router.get("/cases", Authenticator, (req, res) => {
   Case.findAndCountAll({
     offset: 0, //is going return from zero
@@ -32,7 +31,12 @@ router.get("/cases/details/:id", Authenticator ,(req, res) => {
   Case.findOne({
     where: { id: id }
   }).then(info => {
-    res.render("details", { info, details: true });
+    Account.findOne({
+      where: { email: req.session.account.email }
+    }).then(infoAccount => {
+      res.render("details", { info, details: true, infoAccount });
+      // res.json({ info, infoAccount });
+    });
   })
 });
 

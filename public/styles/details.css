@@ -95,8 +95,12 @@
   width: 100%;
 }
 
-.details .footer .buttons a {
+.details .footer .buttons p {
   margin-right: 1rem;
+}
+
+.details .footer .buttons p span {
+  color: var(--color-redhero);
 }
 
 
