@@ -31,3 +31,13 @@ and the interested people can help with money
 <a href="https://www.figma.com/file/2C2yvw7jsCOGmaNUDftX9n/Be-The-Hero---OmniStack-11?node-id=0%3A1">
   <i>See the original project here.</i>
 </a>
+
+## How to use?
+Donwload the project or do a git clone
+`git clone https://github.com/CauaS1/be-the-hero.git`
+
+Open the project in your IDE and do a:
+`node index.js` or
+`nodemon index.js`
+
+
